@@ -13,7 +13,7 @@ async function main() {
 
         try {
             // Constuct the chat history by iterating over the history
-            const messages= chatHistory.map(([role, content]) = ({ role, content}));
+            const messages = chatHistory.map(([role, content]) => ({ role, content}));
 
             // Add the latest user input
             messages.push({ role: 'user', content: userInput });
@@ -36,7 +36,7 @@ async function main() {
             chatHistory.push({'user': userInput})
             chatHistory.push({'assistant': completionText})
             
-        }; catch (error) {
+        } catch (error) {
             console.error(colors.red(error));
         }
 
@@ -44,9 +44,3 @@ async function main() {
 }
 
 main();
-
-try {
-    
-} catch (error) {
-    
-}
